@@ -1,0 +1,27 @@
+.navbar {
+  background-color: #78c5ec;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #333;
+}
+
+.navbar-nav > li > a {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dropdown-menu > li > a {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
