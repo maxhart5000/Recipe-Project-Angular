@@ -1,9 +1,11 @@
-<app-header></app-header>
+<app-header (outputFeature)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12" *ngIf="loadedFeature==='recipe'; else elseBlock">
       <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
     </div>
+    <ng-template #elseBlock>
+      <app-shopping-list></app-shopping-list>
+    </ng-template>
   </div>
 </div>

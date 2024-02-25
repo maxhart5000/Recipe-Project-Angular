@@ -4,16 +4,14 @@
   </div>
 </div>
 <div class="row">
-  <div *ngFor="let recipe of recipes; let i = index" class="col-md-12 col-lg-6">
-    <div class="card mb-3">
-      <img src="{{ recipe.imagePath }}" alt="{{ recipe.name }}" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">{{ recipe.name }}</h5>
-        <p class="card-text">{{ recipe.description }}</p>
-        <a href="#" class="btn btn-primary">View Recipe</a>
-        <app-recipe-item></app-recipe-item>
+  <div class="col-12" *ngFor="let recipeElement of recipes; let i = index">
+    <div class="row" *ngIf="i % 2 === 0">
+      <div class="col-md-6 col-lg-6">
+        <app-recipe-item [recipe]="recipeElement" (recipeSelected)="onRecipeSelected($event)"></app-recipe-item>
+      </div>
+      <div class="col-md-6 col-lg-6" *ngIf="recipes[i + 1]">
+        <app-recipe-item [recipe]="recipes[i + 1]" (recipeSelected)="onRecipeSelected($event)"></app-recipe-item>
       </div>
     </div>
   </div>
 </div>
-
