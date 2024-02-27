@@ -13,22 +13,21 @@ h1 {
   margin-bottom: 10px;
 }
 
-.dropdown-menu {
-  background-color: #f8f9fa;
-  border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-item {
-  color: #333;
-}
-
-.dropdown-item:hover {
-  background-color: #f1f3f5;
-}
-
 p {
   color: #555;
   font-size: 16px;
   margin-bottom: 5px;
+}
+
+.dropdown-menu {
+  background-color: #343a40; /* Dark gray */
+}
+
+.dropdown-item {
+  color: #f8c471; /* Orange */
+}
+
+.dropdown-item:hover {
+  color: #fdfefe; /* Almost white */
+  background-color: #f8c471; /* Orange */
 }
