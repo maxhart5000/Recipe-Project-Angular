@@ -7,10 +7,10 @@
   <div class="col-12" *ngFor="let recipeElement of recipes; let i = index">
     <div class="row" *ngIf="i % 2 === 0">
       <div class="col-md-6 col-lg-6">
-        <app-recipe-item [recipe]="recipeElement" (recipeSelected)="onRecipeSelected($event)"></app-recipe-item>
+        <app-recipe-item [recipe]="recipeElement"></app-recipe-item>
       </div>
       <div class="col-md-6 col-lg-6" *ngIf="recipes[i + 1]">
-        <app-recipe-item [recipe]="recipes[i + 1]" (recipeSelected)="onRecipeSelected($event)"></app-recipe-item>
+        <app-recipe-item [recipe]="recipes[i + 1]"></app-recipe-item>
       </div>
     </div>
   </div>
